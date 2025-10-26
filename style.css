@@ -225,4 +225,39 @@ footer {
 }
 
 
+/* ===== Mobile Optimization ===== */
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
 
+@media (max-width: 768px) {
+  .running-text {
+    font-size: 0.8rem; 
+    padding-left: 100vw;    
+    animation-duration: 25s;  
+  }
+
+  main {
+    background-size: cover;  
+    height: 40vh;
+    padding-bottom: 20px;
+  }
+
+  main p {
+    font-size: 0.9rem;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .event-card h3 {
+    font-size: 1rem;
+  }
+
+  .event-card p {
+    font-size: 0.85rem;
+  }
+}
