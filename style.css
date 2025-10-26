@@ -123,6 +123,59 @@ main p {
   z-index: 1;
 }
 
+#events {
+  padding: 50px 20px;
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.events-container h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.event-card {
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,200,120,0.4);
+  transition: transform 0.3s ease;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event-card h3 {
+  margin: 10px 0 5px 0;
+  font-size: 1.2em;
+}
+
+.event-card p {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0,224,114,0.6);
+}
+
+
+
+
+
+
+
 
 /* ===== Footer ===== */
 footer {
