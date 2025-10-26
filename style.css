@@ -170,6 +170,38 @@ main p {
   box-shadow: 0 0 15px rgba(0,224,114,0.6);
 }
 
+#events {
+  position: relative;
+  padding-top: 40px;
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+  text-align: center;
+}
+
+.running-text {
+  position: absolute;
+  top: 0; 
+  width: 100%;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.running-text p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+  text-transform: uppercase;
+  text-shadow: 0 0 6px #00ff66; /* glow hijau lembut */
+  font-weight: bold;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
 
 
 
