@@ -27,19 +27,17 @@ header h1 {
   margin-bottom: 10px;
 }
 
-/* Header container untuk teks + logo */
 .header-container {
   display: flex;
-  align-items: center; /* Vertikal rata tengah */
-  justify-content: center; /* Horizontal tengah */
-  gap: 15px; /* Jarak antara logo dan teks */
+  align-items: center; 
+  justify-content: center;
+  gap: 15px; 
 }
 
-/* Logo */
 .header-container .logo {
-  height: 4em;           /* Tinggi logo */
-  width: auto;           /* Agar proporsional */
-  transform: translateY(-1.5px); /* Geser logo sedikit ke atas */
+  height: 4em;        
+  width: auto;      
+  transform: translateY(-1.5px); 
 }
 
 
@@ -142,3 +140,4 @@ footer {
     gap: 10px;
   }
 }
+
