@@ -172,13 +172,13 @@ main p {
 
 #events {
   position: relative;
-  padding-top: 50px; /* space untuk running text */
+  padding-top: 50px; 
   overflow: visible;
 }
 
 .running-text-wrapper {
   width: 100%;
-  overflow: hidden; /* membatasi view di layar */
+  overflow: hidden; 
   position: absolute;
   top: 0;
 }
@@ -186,12 +186,12 @@ main p {
 .running-text {
   display: inline-block;
   white-space: nowrap;
-  padding-left: 100%; /* start dari luar layar */
-  animation: marquee 15s linear infinite; /* atur kecepatan */
+  padding-left: 100%;
+  animation: marquee 20s linear infinite; 
   text-transform: uppercase;
   color: #fff;
   font-weight: bold;
-  text-shadow: 0 0 6px #00ff66; /* glow hijau */
+  text-shadow: 0 0 6px #00ff66; 
 }
 
 @keyframes marquee {
@@ -222,3 +222,4 @@ footer {
     gap: 10px;
   }
 }
+
