@@ -27,6 +27,20 @@ header h1 {
   margin-bottom: 10px;
 }
 
+.header-container {
+  display: flex;
+  align-items: center; /* Vertikal rata tengah */
+  justify-content: center; /* Horizontal tengah */
+  gap: 15px; /* Jarak antara logo dan teks */
+}
+
+/* Logo */
+.header-container .logo {
+  height: 2em; /* Sesuaikan dengan ukuran h1 */
+  width: auto; /* agar proporsional */
+}
+
+
 /* ===== Menu Navigasi ===== */
 nav {
   margin-top: 10px;
