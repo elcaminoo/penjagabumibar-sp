@@ -179,7 +179,7 @@ main p {
 
 .running-text-wrapper {
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
   position: absolute;
   top: 0;
 }
@@ -187,7 +187,7 @@ main p {
 .running-text {
   display: inline-block;
   white-space: nowrap;
-  padding-left: 100%;
+  padding-left: 100vw;
   animation: marquee 30s linear infinite; 
   text-transform: uppercase;
   color: #fff;
