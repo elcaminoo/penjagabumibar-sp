@@ -27,6 +27,7 @@ header h1 {
   margin-bottom: 10px;
 }
 
+/* Header container untuk teks + logo */
 .header-container {
   display: flex;
   align-items: center; /* Vertikal rata tengah */
@@ -36,8 +37,9 @@ header h1 {
 
 /* Logo */
 .header-container .logo {
-  height: 2em; /* Sesuaikan dengan ukuran h1 */
-  width: auto; /* agar proporsional */
+  height: 4em;           /* Tinggi logo */
+  width: auto;           /* Agar proporsional */
+  transform: translateY(-1.5px); /* Geser logo sedikit ke atas */
 }
 
 
