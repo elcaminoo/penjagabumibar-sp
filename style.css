@@ -324,51 +324,6 @@ main p {
   }
 }
 
-/* ===== Schedule Page ===== */
-.schedule-main {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #121212;
-  color: #e0e0e0;
-}
-
-.schedule-main h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00ff99;
-  text-shadow: 0 0 8px rgba(0,255,180,0.5);
-}
-
-.channels-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
-.channel-logos {
-  width: 90%;
-  max-width: 800px;
-  border-radius: 10px;
-  opacity: 0.9;
-}
-
-.schedule-list h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #ffd700;
-}
-
-.schedule-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.schedule-list li {
-  margin: 8px 0;
-  font-size: 1.1rem;
-}
-
-
 
 
 
