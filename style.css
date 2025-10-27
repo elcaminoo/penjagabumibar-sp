@@ -200,6 +200,89 @@ main p {
   100% { transform: translateX(-100%); }
 }
 
+#menu {
+  padding: 60px 20px;
+  background-color: #222;
+  text-align: center;
+}
+
+#menu h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+  text-shadow: 0 0 6px rgba(0,177,79,0.5);
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* penuh layar */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.slider-item {
+  min-width: 100%; /* setiap slide memenuhi container */
+  display: flex;
+  justify-content: center;
+}
+
+.slider-item img {
+  width: auto;        /* otomatis lebar mengikuti rasio */
+  height: 90vh;       /* tinggi 90% viewport supaya besar dan proporsional */
+  max-width: 100%;    /* jangan melebihi container */
+  object-fit: contain; 
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,224,114,0.5);
+}
+
+
+/* Tombol prev/next */
+.slider-container button {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,177,79,0.8);
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.slider-container button:hover {
+  background-color: #00ff66;
+}
+
+.slider-container .prev { left: 10px; }
+.slider-container .next { right: 10px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .slider-container { max-width: 90%; }
+}
+
+@media (max-width: 480px) {
+  .slider-container { max-width: 100%; }
+}
+
+.menu-title {
+  color: #00ff66;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px rgba(0,224,114,0.7);
+  font-family: 'Poppins', sans-serif;
+}
+
 
 
 
