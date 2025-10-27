@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateMenuTitle();
   });
 
-  // Reset index saat mencapai clone
+  // Reset index 
   track.addEventListener('transitionend', () => {
     if (allSlides[index].id === "first-clone") {
       track.style.transition = "none";
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     updateMenuTitle();
   });
 
-  // Update slideWidth saat resize
+  // Update slideWidth
   window.addEventListener('resize', () => {
     slideWidth = slides[0].clientWidth;
     track.style.transition = "none";
