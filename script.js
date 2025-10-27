@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Smooth scroll
-  const menuBtn = document.querySelector('.main-buttons a[href="#food"]');
+  const menuBtn = document.querySelector('.main-buttons a[href="#menu"]');
   const eventsBtn = document.querySelector('.main-buttons a[href="#events"]');
   const menuSection = document.getElementById('menu');
   const eventsSection = document.getElementById('events');
