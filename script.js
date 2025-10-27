@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Slider
+  // ===== Slider =====
   const track = document.querySelector('#menu .slider-track');
   const slides = Array.from(document.querySelectorAll('#menu .slider-item'));
   const prevBtn = document.querySelector('#menu .prev');
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       "Juice & Smoothies Menu"
     ];
 
+    // ===== Clone for looping =====
     let index = 1;
     const firstClone = slides[0].cloneNode(true);
     const lastClone = slides[slides.length - 1].cloneNode(true);
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let slideWidth = slides[0].clientWidth;
     track.style.transform = `translateX(-${slideWidth * index}px)`;
 
+    // ===== Functions =====
     function moveToSlide() {
       track.style.transition = "transform 0.6s ease";
       track.style.transform = `translateX(-${slideWidth * index}px)`;
@@ -41,28 +43,65 @@ document.addEventListener("DOMContentLoaded", function() {
       titleElement.textContent = titles[realIndex];
     }
 
-    nextBtn.addEventListener('click', () => { if(index < allSlides.length-1){ index++; moveToSlide(); updateMenuTitle(); } });
-    prevBtn.addEventListener('click', () => { if(index > 0){ index--; moveToSlide(); updateMenuTitle(); } });
+    // ===== Button Events =====
+    nextBtn.addEventListener('click', () => { 
+      if(index < allSlides.length - 1) { index++; moveToSlide(); updateMenuTitle(); } 
+    });
+    prevBtn.addEventListener('click', () => { 
+      if(index > 0) { index--; moveToSlide(); updateMenuTitle(); } 
+    });
 
+    // ===== Loop Handling =====
     track.addEventListener('transitionend', () => {
-      if(allSlides[index].id === "first-clone"){ track.style.transition="none"; index=1; track.style.transform=`translateX(-${slideWidth*index}px)`; }
-      if(allSlides[index].id === "last-clone"){ track.style.transition="none"; index=allSlides.length-2; track.style.transform=`translateX(-${slideWidth*index}px)`; }
+      if(allSlides[index].id === "first-clone") { 
+        track.style.transition = "none"; 
+        index = 1; 
+        track.style.transform = `translateX(-${slideWidth * index}px)`; 
+      }
+      if(allSlides[index].id === "last-clone") { 
+        track.style.transition = "none"; 
+        index = allSlides.length - 2; 
+        track.style.transform = `translateX(-${slideWidth * index}px)`; 
+      }
       updateMenuTitle();
     });
 
-    window.addEventListener('resize', () => { slideWidth = slides[0].clientWidth; track.style.transition="none"; track.style.transform=`translateX(-${slideWidth*index}px)`; });
+    // ===== Resize Handling =====
+    window.addEventListener('resize', () => { 
+      slideWidth = slides[0].clientWidth; 
+      track.style.transition = "none"; 
+      track.style.transform = `translateX(-${slideWidth * index}px)`; 
+    });
 
     updateMenuTitle();
   }
 
-  // Smooth scroll
+  // ===== Smooth Scroll =====
   const menuBtn = document.querySelector('.main-buttons a[href="#menu"]');
   const eventsBtn = document.querySelector('.main-buttons a[href="#events"]');
   const menuSection = document.getElementById('menu');
   const eventsSection = document.getElementById('events');
 
-  function smoothScroll(target){ if(target) target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  function smoothScroll(target) {
+    if(target) {
+      const headerOffset = 20; // jarak dari atas
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-  if(menuBtn) menuBtn.addEventListener('click', e=>{ e.preventDefault(); smoothScroll(menuSection); });
-  if(eventsBtn) eventsBtn.addEventListener('click', e=>{ e.preventDefault(); smoothScroll(eventsSection); });
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  if(menuBtn) menuBtn.addEventListener('click', e => { 
+    e.preventDefault(); 
+    smoothScroll(menuSection); 
+  });
+
+  if(eventsBtn) eventsBtn.addEventListener('click', e => { 
+    e.preventDefault(); 
+    smoothScroll(eventsSection); 
+  });
 });
