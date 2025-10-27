@@ -275,7 +275,7 @@ main p {
 }
 
 .menu-title {
-  color: #fff;
+  color: #ffffff !important;
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 20px;
@@ -344,4 +344,5 @@ html, body {
     font-size: 0.85rem;
   }
 }
+
 
