@@ -216,7 +216,7 @@ main p {
 .slider-container {
   position: relative;
   overflow: hidden;
-  width: 100%; /* penuh layar */
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -227,15 +227,15 @@ main p {
 }
 
 .slider-item {
-  min-width: 100%; /* setiap slide memenuhi container */
+  min-width: 100%; 
   display: flex;
   justify-content: center;
 }
 
 .slider-item img {
-  width: auto;        /* otomatis lebar mengikuti rasio */
-  height: 90vh;       /* tinggi 90% viewport supaya besar dan proporsional */
-  max-width: 100%;    /* jangan melebihi container */
+  width: auto; 
+  height: 90vh;
+  max-width: 100%;
   object-fit: contain; 
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0,224,114,0.5);
@@ -275,7 +275,7 @@ main p {
 }
 
 .menu-title {
-  color: #00ff66;
+  color: #fff;
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 20px;
